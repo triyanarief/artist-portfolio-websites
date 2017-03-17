@@ -1,5 +1,10 @@
-# Build settings
+# Site settings
+title: artist portfolio
+email: artist@email
+description: Software Engineer // Designer // Architect
 
+
+# Build settings
 markdown: kramdown
 permalink: pretty
 
@@ -7,4 +12,4 @@ port: 3000
 
 sass:
   sass_dir: assets/css
-  style: :nested
+  style: :compressed

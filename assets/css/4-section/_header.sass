@@ -1,20 +1,23 @@
 header
   height: 450px
-  background: #ccc
+  background: url(../img/bg1.jpg) center center
+  background-size: cover
 
   .logo
     +size(50px)
-    background: #999
+    float: left
+    margin: 10px 0 0 30px
+    opacity: 0.5
 
   nav
+    float: right
+    margin: 30px 30px 0 0
 
     a
       display: inline-block
       margin-left: 20px
       color: rgba(0, 0, 0, 0.7)
-      font-size: 14px
-      font-weight: 700
-      text-transform: uppercase
+      @extend %small-bold
 
       &:hover
         color: rgba(0,0,0,1)
@@ -28,8 +31,20 @@ header
     text-transform: uppercase
     letter-spacing: 0.05em
     text-align: center
+    margin-bottom: 20px
+    clear: both
+    padding-top: 100px
 
     span
       display: inline-block
       padding: 0.2em 0.5em
       border: white solid 20px
+
+  .kicker
+    @extend %small-bold
+    text-align: center
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: 0.05em
+    color: white
+    line-height: 1

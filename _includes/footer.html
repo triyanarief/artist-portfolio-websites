@@ -1,14 +1,12 @@
-<footer>
+<footer id="footer">
 
   <div class="lockup">
-    <div class="logo">{% include icons/logo.html %}</div>
 
     <div class="content-wrap">
       <nav>
-        <a href="">About Me</a>
-        <a href="">Work</a>
-        <a href="">Clients</a>
-        <a href="">Contact</a>
+        {% for item in site.data.settings.menu %}
+          <a href="{{ item.url }}">{{ item.name }}</a>
+        {% endfor %}
       </nav>
 
       <p class="copyright">All content copyright {{ site.time | date: '%Y' }}</p>

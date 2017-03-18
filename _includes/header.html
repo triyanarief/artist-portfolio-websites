@@ -1,11 +1,12 @@
-<header>
-  <div class="logo">{% include icons/logo.html %}</div>
+<header id="header">
+
   <nav>
-    <a href="">About Me</a>
-    <a href="">Work</a>
-    <a href="">Clients</a>
-    <a href="">Contact</a>
+    {% for item in site.data.settings.menu %}
+      <a href="{{ item.url }}">{{ item.name }}</a>
+    {% endfor %}
   </nav>
-  <h1><span>{{ site.title }}</span></h1>
-  <p class="kicker">{{ site.description }}</p>
+
+  <h1><span>{{ site.data.settings.title }}</span></h1>
+  <p class="kicker">{{ site.data.settings.description }}</p>
+
 </header>
